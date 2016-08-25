@@ -1,6 +1,8 @@
 package vsnick.jasmine.cbit;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -32,6 +34,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        SharedPreferences sharedPreferences =getSharedPreferences("myfile", Context.MODE_PRIVATE);
+        Boolean firstTime = sharedPreferences.getBoolean("first",true);
+        if(true)
+        {
+            startActivity(new Intent(this,LoginActivity.class));
+        }
     }
 
     @Override
@@ -80,4 +89,5 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

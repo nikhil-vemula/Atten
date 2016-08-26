@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimaryLight"
     tools:context="vsnick.jasmine.cbit.Attendance">
     <TextView
         android:id="@+id/atten"
@@ -14,15 +15,19 @@
         android:textSize="50sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <ListView
+        android:background="@drawable/my_rect"
+        android:layout_below="@id/atten"
+        android:id="@+id/atten_detailed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
     <Button
-        android:layout_below="@+id/atten"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/my_rect"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/atten_detailed"
         android:id="@+id/update"
         android:text="Update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <ListView
-        android:layout_below="@id/update"
-        android:id="@+id/atten_detailed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ListView>
 </RelativeLayout>
